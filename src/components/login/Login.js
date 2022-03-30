@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container,Row, Col, Form, FloatingLabel, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   return (
@@ -13,7 +14,7 @@ export const Login = () => {
                         <FloatingLabel
                             controlId="floatingInput"
                             label="Email address"
-                            className="mb-3"
+                            className="mb-2"
                         >
                             <Form.Control 
                             type="email" 
@@ -24,16 +25,22 @@ export const Login = () => {
                         <FloatingLabel 
                             controlId="floatingPassword" 
                             label="Password"
-                            className="mb-3">
+                            className="mb-2">
                             <Form.Control 
                             type="password" 
                             name="password"
                             placeholder="Password"
                             required />
                         </FloatingLabel>
-                        <Button className="mb-2" type="submit">
+                        
+                        <Button variant="primary" className="mb-2" type="submit">
                             Login
                         </Button>
+                        <Link to="/register">
+                            <Button variant="outline-primary" className="mb-2">
+                                Register
+                            </Button>
+                        </Link>
                     </Form>
                     <hr/>
                 </Col>

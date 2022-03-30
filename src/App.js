@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Entry } from './page/entry/Entry';
 
 function App() {
